@@ -5,11 +5,16 @@ import Root from "../Root/Root";
 import Home from "../Home/Home";
 import UpdateProfile from "../Pages/UpdateProfile";
 import HouseDetails from "../Pages/HouseDetails";
+import Error from "../Pages/Error";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
+import PrivateRoute from "../PriveatRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Root />,
+        errorElement: <Error />,
         children: [
             {
                 path: "/",
@@ -17,11 +22,19 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/houseDetails/:id",
-                element: <HouseDetails />
+                element: <PrivateRoute><HouseDetails /></PrivateRoute>
             },
             {
                 path: "/updateProfile",
                 element: <UpdateProfile />
+            },
+            {
+                path: "/login",
+                element: <Login />
+            },
+            {
+                path: "/register",
+                element: <Register />
             }
         ]
     },

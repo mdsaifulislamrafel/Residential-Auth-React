@@ -1,8 +1,16 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const { user, logOut  } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut();
+        toast.success('Successfully logout!')
+    }
 
     return (
         <nav className="relative bg-white shadow dark:bg-gray-800">
@@ -38,7 +46,9 @@ const Navbar = () => {
                                 </div>
                                 <h3 className="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">Khatab wedaa</h3>
                             </button>
-                            {/* <button className='btn'>LogOut</button> */}
+                            {
+                                user ? <button onClick={() => handleLogOut()} className='btn btn-success text-white btn-sm'>Log Out</button> : <Link to={"/login"} className='btn'>Log in</Link>
+                            }
                         </div>
                     </div>
 
