@@ -1,8 +1,10 @@
 const Footer = () => {
     return (
-        <div>
-            <h1>This is a footer</h1>
-        </div>
+
+        <footer className="bg-sky-100 py-5 text-center">
+            <p>&copy; 2024 NavigateUI. All Rights Reserved.</p>
+        </footer>
+
     );
 };
 
