@@ -5,7 +5,9 @@ const Root = () => {
     return (
         <div className='w-full md:w-[95%] mx-auto'>
             <Navbar />
-            <Outlet></Outlet>
+            <div className='min-h-[calc(100vh-60px)]'>
+                <Outlet></Outlet>
+            </div>
             <Footer />
         </div>
     );
