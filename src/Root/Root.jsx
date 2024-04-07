@@ -3,7 +3,7 @@ import Navbar from '../Pages/Navbar';
 import Footer from '../Pages/Footer';
 const Root = () => {
     return (
-        <div>
+        <div className='w-full md:w-[95%] mx-auto'>
             <Navbar />
             <Outlet></Outlet>
             <Footer />

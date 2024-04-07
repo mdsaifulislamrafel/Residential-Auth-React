@@ -1,10 +1,11 @@
 import Banner from "../Pages/Banner";
+import Houses from "../Pages/Houses";
 
 const Home = () => {
     return (
-        <div className=" my-5 mx-auto">
+        <div className=" my-5">
             <Banner />
-            <h1>This is a home</h1>
+            <Houses />
         </div>
     );
 };
