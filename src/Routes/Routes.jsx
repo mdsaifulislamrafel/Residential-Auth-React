@@ -4,6 +4,7 @@ import {
 import Root from "../Root/Root";
 import Home from "../Home/Home";
 import UpdateProfile from "../Pages/UpdateProfile";
+import HouseDetails from "../Pages/HouseDetails";
 
 export const router = createBrowserRouter([
     {
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />
+            },
+            {
+                path: "/houseDetails/:id",
+                element: <HouseDetails />
             },
             {
                 path: "/updateProfile",

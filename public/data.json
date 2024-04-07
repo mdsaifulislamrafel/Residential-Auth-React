@@ -9,8 +9,8 @@
     "status": "sale",
     "area": "2,500 sq ft",
     "location": "Suburban Oasis, USA",
-    "facilities": ["spacious living room", "backyard", "garage"],
-    "button": "View Property"
+    "facilities": ["spacious living room", "backyard", "garage"]
+    
   },
   {
     "image": "https://i.ibb.co/TKk8s6R/pexels-bryan-dijkhuizen-18189048.jpg",
@@ -22,8 +22,8 @@
     "status": "rent",
     "area": "1,800 sq ft",
     "location": "Downtown Loft District, USA",
-    "facilities": ["modern kitchen", "rooftop terrace", "fitness center"],
-    "button": "View Property"
+    "facilities": ["modern kitchen", "rooftop terrace", "fitness center"]
+    
   },
   {
     "image": "https://i.ibb.co/HrLbfSw/pexels-vlad-bagacian-1212053.jpg",
@@ -35,8 +35,8 @@
     "status": "sale",
     "area": "1,500 sq ft",
     "location": "Skyline Towers, USA",
-    "facilities": ["infinity pool", "spa", "concierge service"],
-    "button": "View Property"
+    "facilities": ["infinity pool", "spa", "concierge service"]
+    
   },
   {
     "image": "https://i.ibb.co/TBQWN83/pexels-vika-glitter-1648768.jpg",
@@ -48,8 +48,8 @@
     "status": "rent",
     "area": "400 sq ft",
     "location": "University Campus, USA",
-    "facilities": ["study lounge", "laundry facilities", "shared kitchen"],
-    "button": "View Property"
+    "facilities": ["study lounge", "laundry facilities", "shared kitchen"]
+    
   },
   {
     "image": "https://i.ibb.co/42tFnWq/pexels-pixabay-277667.jpg",
@@ -61,8 +61,8 @@
     "status": "rent",
     "area": "1,200 sq ft",
     "location": "Sunset Meadows, USA",
-    "facilities": ["landscaped gardens", "community center", "healthcare services"],
-    "button": "View Property"
+    "facilities": ["landscaped gardens", "community center", "healthcare services"]
+    
   },
   {
     "image": "https://i.ibb.co/dPtfV2Z/pexels-pixabay-164558.jpg",
@@ -74,8 +74,8 @@
     "status": "rent",
     "area": "2,000 sq ft",
     "location": "Seaside Retreat, USA",
-    "facilities": ["ocean view", "private beach access", "BBQ area"],
-    "button": "View Property"
+    "facilities": ["ocean view", "private beach access", "BBQ area"]
+    
   },
   {
     "image": "https://i.ibb.co/QFS4NrF/pexels-binyamin-mellish-1396132.jpg",
@@ -87,8 +87,8 @@
     "status": "sale",
     "area": "3,000 sq ft",
     "location": "Country Haven, USA",
-    "facilities": ["wrap-around porch", "barn", "orchard"],
-    "button": "View Property"
+    "facilities": ["wrap-around porch", "barn", "orchard"]
+    
   },
   {
     "image": "https://i.ibb.co/h8NVtSG/pexels-jessica-bryant-1370704.jpg",
@@ -100,8 +100,8 @@
     "status": "sale",
     "area": "1,000 sq ft",
     "location": "Cityscape Plaza, USA",
-    "facilities": ["open floor plan", "city views", "gym"],
-    "button": "View Property"
+    "facilities": ["open floor plan", "city views", "gym"]
+    
   },
   {
     "image": "https://i.ibb.co/YRTSV6f/pexels-binyamin-mellish-186077.jpg",
@@ -113,7 +113,7 @@
     "status": "rent",
     "area": "800 sq ft",
     "location": "Lakeside Haven, USA",
-    "facilities": ["fireplace", "deck", "fishing dock"],
-    "button": "View Property"
+    "facilities": ["fireplace", "deck", "fishing dock"]
+    
   }
 ]

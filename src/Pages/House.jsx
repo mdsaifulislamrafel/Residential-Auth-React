@@ -1,20 +1,25 @@
+/* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
+
 const House = ({ item }) => {
-    
+    const { id, image, segment_name, description, facilities } = item;
     return (
         <div>
-            <div className="card bg-base-100 shadow-xl">
-                <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+            <div className="card bg-base-100 h-[500px] p-5 border-2 transition  hover:shadow-xl">
+                <figure><img className="h-[200px] w-full" src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
-                        Shoes!
+                        {segment_name}
                         <div className="badge badge-secondary">NEW</div>
                     </h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p>{description}</p>
                     <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div>
-                        <div className="badge badge-outline">Products</div>
+                        {
+                            facilities?.map((fac, index) => { return (<div key={index} className="badge badge-outline">{fac}</div>) })
+                        }
                     </div>
                 </div>
+                <Link to={`/houseDetails/${id}`} className="btn btn-secondary">View Property</Link>
             </div>
         </div>
     );
