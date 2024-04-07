@@ -25,7 +25,7 @@ const Login = () => {
             .catch(error => {
                 if (error) {
                     reset();
-                    toast.error("Place checkout your email or password");
+                    toast.error("Pleach checkout your email or password");
                 }
             })
     };

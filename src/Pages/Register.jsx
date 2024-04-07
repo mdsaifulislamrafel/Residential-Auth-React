@@ -7,21 +7,29 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
-    const { createUser, googleSignIn, facebookSignIn, githubSignIn } = useContext(AuthContext);
+    const { createUser, googleSignIn, facebookSignIn, githubSignIn, upDateProfile } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
-
     const onSubmit = (data) => {
-        const { usernameOrEmail, password } = data;
+        const { usernameOrEmail, password, fullName, photoURL, confirmPassword } = data;
+
+        if (password !== confirmPassword) {
+            toast.error("Passwords do not match");
+            return;
+        }
+
         createUser(usernameOrEmail, password)
             .then(result => {
-                if (result?.user) {
-                    toast.success("User created successfully")
-                    reset();
-                    navigate(location.state?.pathname || "/");
-                }
-            })
+                upDateProfile(fullName, photoURL)
+                    .then(() => {
+                        if (result?.user) {
+                            toast.success("User created successfully")
+                            reset();
+                            navigate(location.state?.pathname || "/");
+                        }
+                    })
+            });
     };
 
     const handleSocialLogin = (socialProvider) => {
@@ -32,10 +40,8 @@ const Register = () => {
                     reset();
                     navigate(location.state?.pathname || "/");
                 }
-
-            })
+            });
     };
-
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="mt-10">
@@ -49,10 +55,17 @@ const Register = () => {
                     {errors.fullName && <span className="text-red-500">This field is required</span>}
                 </div>
                 <div className="space-y-2 text-sm">
-                    <label htmlFor="usernameoremail" className="block">
+                    <label htmlFor="photoURL" className="block">
+                        photo URL
+                    </label>
+                    <input {...register("photoURL", { required: true })} type="text" name="photoURL" id="photoURL" placeholder="Enter Your Photo URL" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring" />
+                    {errors.photoURL && <span className="text-red-500">This field is required</span>}
+                </div>
+                <div className="space-y-2 text-sm">
+                    <label htmlFor="usernameOrEmail" className="block">
                         Username or Email
                     </label>
-                    <input {...register("usernameOrEmail", { required: true })} type="email" name="usernameOrEmail" id="usernameoremail" placeholder="Username or Email" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring" />
+                    <input {...register("usernameOrEmail", { required: true })} type="email" name="usernameOrEmail" id="usernameOrEmail" placeholder="Username or Email" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring" />
                     {errors.usernameOrEmail && <span className="text-red-500">This field is required</span>}
                 </div>
                 <div className="space-y-2 text-sm">
@@ -63,10 +76,10 @@ const Register = () => {
                     {errors.password && <span className="text-red-500">This field is required</span>}
                 </div>
                 <div className="space-y-2 text-sm">
-                    <label htmlFor="confirmpassword" className="block">
+                    <label htmlFor="confirmPassword" className="block">
                         Confirm Password
                     </label>
-                    <input {...register("confirmPassword", { required: true })} type="password" name="confirmPassword" id="confirmpassword" placeholder="Confirm Password" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring" />
+                    <input {...register("confirmPassword", { required: true })} type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring" />
                     {errors.confirmPassword && <span className="text-red-500">This field is required</span>}
                 </div>
                 <button type="submit" className="text-lg rounded-xl relative p-[10px] block w-full bg-indigo-600 text-white border-y-4 duration-500 overflow-hidden focus:border-indigo-500 z-50 group">

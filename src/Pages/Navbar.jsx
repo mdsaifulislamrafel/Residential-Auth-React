@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const { user, logOut  } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const handleLogOut = () => {
         logOut();
@@ -39,17 +39,20 @@ const Navbar = () => {
                         <a href="#" className="block px-3 py-2 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Random Item</a>
                         <a href="#" className="block px-3 py-2 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Experts</a>
                         <div className="flex items-center mt-4 lg:mt-0">
-                            <button type="button" className="flex items-center focus:outline-none" aria-label="toggle profile dropdown">
-                                <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
-                                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" className="object-cover w-full h-full" alt="avatar" />
-
+                            {user ? (
+                                <div className="flex gap-2 items-center">
+                                    <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
+                                        <img src={user?.photoURL || "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"} className="object-cover w-full h-full" alt="avatar" />
+                                    </div>
+                                    <h3 className="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">{user?.displayName}</h3>
+                                    <button onClick={() => handleLogOut()} className='btn btn-success text-white btn-sm'>Log Out</button>
                                 </div>
-                                <h3 className="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">Khatab wedaa</h3>
-                            </button>
-                            {
-                                user ? <button onClick={() => handleLogOut()} className='btn btn-success text-white btn-sm'>Log Out</button> : <Link to={"/login"} className='btn'>Log in</Link>
-                            }
+                            ) : (
+                                <Link to={"/login"} className='btn btn-accent btn-sm font-bold'>Log in</Link>
+                            )}
                         </div>
+
+
                     </div>
 
 
