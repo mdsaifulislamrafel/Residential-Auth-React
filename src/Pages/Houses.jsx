@@ -11,7 +11,7 @@ const Houses = () => {
     }, [data])
     return (
         <div className="my-10">
-            <Marquee speed={300}><h3 className="text-2xl font-bold text-center bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient italic uppercase">Select Houses</h3></Marquee>
+            <Marquee speed={350}><h3 className="text-2xl font-bold text-center bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient italic uppercase">choose your house</h3></Marquee>
             
             <br />
             <hr className="border-y-4 border-yellow-400" />
