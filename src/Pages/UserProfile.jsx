@@ -2,12 +2,16 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from "react-helmet-async";
 AOS.init();
 
 const UserProfile = () => {
     const { user } = useContext(AuthContext);
     return (
         <div className="flex flex-col justify-center items-center h-full md:h-[80vh] " data-aos="zoom-out-up">
+            <Helmet>
+                <title>User Profile</title>
+            </Helmet>
             <div className="p-20 shadow-lg font-sans rounded-xl space-y-4 flex flex-col justify-center items-center mx-auto bg-white" >
                 <div className="relative group">
                     <img data-aos="zoom-in" data-aos-delay="500" className="w-[200px] h-[200px] bg-slate-500 object-cover rounded-full" src={user?.photoURL} alt="card navigate ui" />
