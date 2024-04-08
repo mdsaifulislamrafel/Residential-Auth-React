@@ -16,12 +16,13 @@ const AuthProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password);
     };
 
-    const upDateProfile =  (fullName, photoURL) => {
+    const upDateProfile = (fullName, photoURL) => {
         return updateProfile(auth.currentUser, {
             displayName: fullName, photoURL: photoURL
-          })
+        })
     };
 
+    
     const signIn = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)

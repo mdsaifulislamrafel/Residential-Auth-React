@@ -68,19 +68,40 @@ const Register = () => {
                     <input {...register("usernameOrEmail", { required: true })} type="email" name="usernameOrEmail" id="usernameOrEmail" placeholder="Username or Email" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring" />
                     {errors.usernameOrEmail && <span className="text-red-500">This field is required</span>}
                 </div>
+
                 <div className="space-y-2 text-sm">
                     <label htmlFor="password" className="block">
                         Password
                     </label>
-                    <input {...register("password", { required: true })} type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring" />
-                    {errors.password && <span className="text-red-500">This field is required</span>}
+                    <input
+                        {...register("password", {
+                            required: true,
+                            pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
+                        })}
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Password"
+                        className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring"
+                    />
+                    {errors.password && errors.password.type === "required" && (
+                        <span className="text-red-500">This field is required</span>
+                    )}
+                    {errors.password && errors.password.type === "pattern" && (
+                        <span className="text-red-500">
+                            Password must have at least one uppercase letter, one lowercase letter, and be at least 6 characters long
+                        </span>
+                    )}
                 </div>
+
                 <div className="space-y-2 text-sm">
                     <label htmlFor="confirmPassword" className="block">
                         Confirm Password
                     </label>
-                    <input {...register("confirmPassword", { required: true })} type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring" />
+                    <input {...register("confirmPassword", { required: true, pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/, })} type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring" />
                     {errors.confirmPassword && <span className="text-red-500">This field is required</span>}
+                    {errors.password && errors.password.type === "pattern" && (<span className="text-red-500">Password must have at least one uppercase letter, one lowercase letter, and be at least 6 characters long</span>
+                    )}
                 </div>
                 <button type="submit" className="text-lg rounded-xl relative p-[10px] block w-full bg-indigo-600 text-white border-y-4 duration-500 overflow-hidden focus:border-indigo-500 z-50 group">
                     Create an account
