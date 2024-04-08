@@ -1,23 +1,22 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast from 'react-hot-toast';
 import { useNavigate, useLocation } from "react-router-dom";
+import { IoMdEyeOff } from "react-icons/io";
+import { FaEye } from "react-icons/fa";
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const { createUser, googleSignIn, facebookSignIn, githubSignIn, upDateProfile } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    const [show, setShow] = useState(false);
 
     const onSubmit = (data) => {
-        const { usernameOrEmail, password, fullName, photoURL, confirmPassword } = data;
+        const { usernameOrEmail, password, fullName, photoURL } = data;
 
-        if (password !== confirmPassword) {
-            toast.error("Passwords do not match");
-            return;
-        }
 
         createUser(usernameOrEmail, password)
             .then(result => {
@@ -41,6 +40,10 @@ const Register = () => {
                     navigate(location.state?.pathname || "/");
                 }
             });
+    };
+
+    const handleShowPassword = () => {
+        setShow(!show);
     };
 
     return (
@@ -73,17 +76,20 @@ const Register = () => {
                     <label htmlFor="password" className="block">
                         Password
                     </label>
-                    <input
-                        {...register("password", {
-                            required: true,
-                            pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
-                        })}
-                        type="password"
-                        name="password"
-                        id="password"
-                        placeholder="Password"
-                        className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring"
-                    />
+                    <div className="relative">
+                        <input
+                            {...register("password", {
+                                required: true,
+                                pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
+                            })}
+                            type={show ? "text" : "password"}
+                            name="password"
+                            id="password"
+                            placeholder="Password"
+                            className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring"
+                        />
+                        <span className="absolute right-4 top-3" onClick={handleShowPassword}>{show ? <IoMdEyeOff className="text-xl" /> : <FaEye className="text-xl" />}</span>
+                    </div>
                     {errors.password && errors.password.type === "required" && (
                         <span className="text-red-500">This field is required</span>
                     )}
@@ -91,16 +97,6 @@ const Register = () => {
                         <span className="text-red-500">
                             Password must have at least one uppercase letter, one lowercase letter, and be at least 6 characters long
                         </span>
-                    )}
-                </div>
-
-                <div className="space-y-2 text-sm">
-                    <label htmlFor="confirmPassword" className="block">
-                        Confirm Password
-                    </label>
-                    <input {...register("confirmPassword", { required: true, pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/, })} type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring" />
-                    {errors.confirmPassword && <span className="text-red-500">This field is required</span>}
-                    {errors.password && errors.password.type === "pattern" && (<span className="text-red-500">Password must have at least one uppercase letter, one lowercase letter, and be at least 6 characters long</span>
                     )}
                 </div>
                 <button type="submit" className="text-lg rounded-xl relative p-[10px] block w-full bg-indigo-600 text-white border-y-4 duration-500 overflow-hidden focus:border-indigo-500 z-50 group">

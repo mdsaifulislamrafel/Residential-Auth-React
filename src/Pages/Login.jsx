@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast from 'react-hot-toast';
 import { useNavigate, useLocation } from "react-router-dom";
+import { IoMdEyeOff } from "react-icons/io";
+import { FaEye } from "react-icons/fa";
+
 
 
 const Login = () => {
@@ -11,6 +14,7 @@ const Login = () => {
     const { signIn, googleSignIn, facebookSignIn, githubSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    const [show, setShow] = useState(false);
 
     const onSubmit = (data) => {
         const { email, password } = data;
@@ -28,6 +32,10 @@ const Login = () => {
                     toast.error("Pleach checkout your email or password");
                 }
             })
+    };
+
+    const handleShowPassword = () => {
+        setShow(!show);
     };
 
     const handleSocialLogin = (socialProvider) => {
@@ -58,8 +66,11 @@ const Login = () => {
                     <label htmlFor="password" className="block ">
                         Password
                     </label>
-                    <input {...register("password", { required: true })} type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring" />
-                    {errors.password && <span className="text-red-500">This field is required</span>}
+                    <div className="relative">
+                        <input {...register("password", { required: true })} type={show ? "text" : "password"} name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring" />
+                        {errors.password && <span className="text-red-500">This field is required</span>}
+                        <span className="absolute right-4 top-3" onClick={handleShowPassword}>{show ? <IoMdEyeOff className="text-xl" /> : <FaEye  className="text-xl"/>}</span>
+                    </div>
                     <div className="flex justify-end text-xs">
                         <a className="hover:underline">
                             Forgot Password?
