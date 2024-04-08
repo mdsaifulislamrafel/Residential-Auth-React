@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import toast from 'react-hot-toast';
 
@@ -32,18 +32,17 @@ const Navbar = () => {
                             </button>
                         </div>
                     </div>
-
                     <div className={`${isOpen ? 'block' : 'hidden'} lg:flex lg:items-center lg:mx-8`}>
-                        <Link to={"/"} className="block px-3 py-2 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Home</Link>
+                        <NavLink to={"/"} className={({ isActive, isPending }) => isActive ? "active text-red-600 underline" : isPending ? "pending " : "block px-3 py-2 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"}>Home</NavLink>
                         {
-                            user && <Link to={"/updateProfile"} className="block px-3 py-2 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Update Profile</Link>
+                            user && <NavLink to={"/updateProfile"} className={({ isActive, isPending }) => isActive ? "active text-red-600 underline" : isPending ? "pending " : "block px-3 py-2 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"}>Update Profile</NavLink>
                         }
                         <a href="#" className="block px-3 py-2 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Random Item</a>
                         <a href="#" className="block px-3 py-2 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Experts</a>
                         <div className="flex items-center mt-4 lg:mt-0">
                             {user ? (
-                                <div  className="flex gap-2 items-center">
-                                    
+                                <div className="flex gap-2 items-center">
+
                                     <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
                                         <img title={user?.displayName} src={user?.photoURL || "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"} className="object-cover w-full h-full" alt="avatar" />
                                     </div>

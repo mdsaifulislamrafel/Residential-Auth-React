@@ -19,7 +19,7 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className='flex flex-col justify-center items-center p-5 h-[85vh]'>
+    <div className='flex flex-col justify-center items-center h-[80vh]'>
 
       <div className='border-2 border-amber-300 p-5 text-center w-full md:w-[40%] space-y-5 animate__animated animate__pulse'>
         <h2 className=" text-3xl font-bold mb-10 border-b-4 border-y-cyan-500 animate__animated animate__backInDown"><span className='bg-300% bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient'>User Profile Update</span></h2>
