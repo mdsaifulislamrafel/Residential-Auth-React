@@ -5,7 +5,7 @@ This is the repository for my awesome website.
 
 
 ## 🔗 Links
-Live Link :https://houses-for-sale-2f2d6.web.app/
+Live Link :https://houses-sale.netlify.app/
 
 
 ## Features
