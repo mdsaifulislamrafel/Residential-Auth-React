@@ -11,6 +11,7 @@ import Register from "../Pages/Register";
 import PrivateRoute from "../PriveatRoute/PrivateRoute";
 import UserProfile from "../Pages/UserProfile";
 import Contact from "../Pages/Contact";
+import Massage from "../Pages/Massage";
 
 export const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <PrivateRoute><Contact /></PrivateRoute>
+            },
+            {
+                path: "/massage",
+                element: <Massage />
             },
             {
                 path: "/login",

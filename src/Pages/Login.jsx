@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import { useNavigate, useLocation } from "react-router-dom";
 import { IoMdEyeOff } from "react-icons/io";
 import { FaEye } from "react-icons/fa";
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -15,6 +16,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [show, setShow] = useState(false);
+
 
     const onSubmit = (data) => {
         const { email, password } = data;
@@ -54,6 +56,9 @@ const Login = () => {
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="mt-10">
             <div className="w-full max-w-md p-8 space-y-3 rounded-xl border bg-white font-sans mx-auto">
+            <Helmet>
+                <title>Login</title>
+            </Helmet>
                 <h1 className="text-3xl font-bold text-center text-indigo-600">Login</h1>
                 <div className="space-y-2 text-sm">
                     <label htmlFor="username" className="block ">
