@@ -6,7 +6,7 @@ const House = ({ item }) => {
     return (
         <div>
             <div data-aos="fade-up" data-aos-duration="3000" className="card bg-base-100 md:h-[500px] p-5 border-2 transition hover:shadow-xl">
-                <figure><img className="md:h-[200px] w-full" src={image} alt="Shoes" /></figure>
+                <figure><img className="h-[200px] w-full" src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
                         {segment_name}
