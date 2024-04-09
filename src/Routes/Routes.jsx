@@ -41,7 +41,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/massage",
-                element: <Massage />
+                element: <PrivateRoute><Massage /></PrivateRoute>
             },
             {
                 path: "/login",

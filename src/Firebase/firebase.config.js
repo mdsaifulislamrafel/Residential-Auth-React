@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC_J-izpXCCwUUrn7O4wkBeFKFAqjzq5a0",
-  authDomain: "houses-for-sale-2f2d6.firebaseapp.com",
-  projectId: "houses-for-sale-2f2d6",
-  storageBucket: "houses-for-sale-2f2d6.appspot.com",
-  messagingSenderId: "159865606719",
-  appId: "1:159865606719:web:690895c6df5fc45bf6de8a"
+  apiKey:import.meta.env.VITE_APIKEY,
+  authDomain:import.meta.env.VITE_AUTHDOMAIN,
+  projectId:import.meta.env.VITE_PROJECTID,
+  storageBucket:import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID,
+  appId:import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase

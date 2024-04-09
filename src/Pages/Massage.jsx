@@ -27,9 +27,9 @@ const Massage = () => {
                     </div>
                     <div data-aos-duration="1800" data-aos="fade-left" data-aos-delay="1000">
                         <label htmlFor="message" className="text-sm font-bold">Message</label>
-                        <textarea id="message" rows="3" className="w-full p-3 rounded border-2 border-black dark:bg-gray-100"></textarea>
+                        <textarea id="message" rows="3" className="w-full p-3 rounded border-2 border-black dark:bg-gray-100 mb-5"></textarea>
                     </div>
-                    <button data-aos-duration="1900" data-aos="fade-left" data-aos-delay="1100" type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-violet-600 dark:text-gray-50"><Link to={"/"}>Send Message</Link></button>
+                    <Link to={"/"} data-aos-duration="1900" data-aos="fade-left" data-aos-delay="1100" type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-violet-600 dark:text-gray-50">Send Message</Link>
                 </form>
             </div>
         </div>
