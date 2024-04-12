@@ -1,6 +1,6 @@
 [
   {
-    "image": "https://i.ibb.co/9GYk02x/pexels-amaury-michaux-18189675.jpg",
+"image": "https://i.ibb.co/9GYk02x/pexels-amaury-michaux-18189675.jpg",
     "estate_title": "Spacious Family Home",
     "id": "1",
     "segment_name": "Single-Family Home",
@@ -9,10 +9,11 @@
     "status": "sale",
     "area": "2,500 sq ft",
     "location": "Suburban Oasis, USA",
-    "facilities": ["spacious living room", "backyard", "garage"]
+    "facilities": ["spacious living room", "backyard", "garage"],
+    "button": "View Property"
   },
   {
-    "image": "https://i.ibb.co/TKk8s6R/pexels-bryan-dijkhuizen-18189048.jpg",
+"image": "https://i.ibb.co/TKk8s6R/pexels-bryan-dijkhuizen-18189048.jpg",
     "estate_title": "Modern Townhouse",
     "id": "2",
     "segment_name": "Townhouse",
@@ -21,10 +22,11 @@
     "status": "rent",
     "area": "1,800 sq ft",
     "location": "Downtown Loft District, USA",
-    "facilities": ["modern kitchen", "rooftop terrace", "fitness center"]
+    "facilities": ["modern kitchen", "rooftop terrace", "fitness center"],
+    "button": "View Property"
   },
   {
-    "image": "https://i.ibb.co/HrLbfSw/pexels-vlad-bagacian-1212053.jpg",
+"image": "https://i.ibb.co/HrLbfSw/pexels-vlad-bagacian-1212053.jpg",
     "estate_title": "Luxury High-Rise Apartment",
     "id": "3",
     "segment_name": "Apartment",
@@ -33,10 +35,11 @@
     "status": "sale",
     "area": "1,500 sq ft",
     "location": "Skyline Towers, USA",
-    "facilities": ["infinity pool", "spa", "concierge service"]
+    "facilities": ["infinity pool", "spa", "concierge service"],
+    "button": "View Property"
   },
   {
-    "image": "https://i.ibb.co/TBQWN83/pexels-vika-glitter-1648768.jpg",
+"image": "https://i.ibb.co/TBQWN83/pexels-vika-glitter-1648768.jpg",
     "estate_title": "Student Dormitory",
     "id": "4",
     "segment_name": "Student Housing",
@@ -45,10 +48,11 @@
     "status": "rent",
     "area": "400 sq ft",
     "location": "University Campus, USA",
-    "facilities": ["study lounge", "laundry facilities", "shared kitchen"]
+    "facilities": ["study lounge", "laundry facilities", "shared kitchen"],
+    "button": "View Property"
   },
   {
-    "image": "https://i.ibb.co/42tFnWq/pexels-pixabay-277667.jpg",
+"image": "https://i.ibb.co/42tFnWq/pexels-pixabay-277667.jpg",
     "estate_title": "Retirement Community Villa",
     "id": "5",
     "segment_name": "Senior Living Community",
@@ -57,10 +61,11 @@
     "status": "rent",
     "area": "1,200 sq ft",
     "location": "Sunset Meadows, USA",
-    "facilities": ["landscaped gardens", "community center", "healthcare services"]
+    "facilities": ["landscaped gardens", "community center", "healthcare services"],
+    "button": "View Property"
   },
   {
-    "image": "https://i.ibb.co/dPtfV2Z/pexels-pixabay-164558.jpg",
+"image": "https://i.ibb.co/dPtfV2Z/pexels-pixabay-164558.jpg",
     "estate_title": "Beachfront Vacation Home",
     "id": "6",
     "segment_name": "Vacation Rental",
@@ -69,10 +74,11 @@
     "status": "rent",
     "area": "2,000 sq ft",
     "location": "Seaside Retreat, USA",
-    "facilities": ["ocean view", "private beach access", "BBQ area"]
+    "facilities": ["ocean view", "private beach access", "BBQ area"],
+    "button": "View Property"
   },
   {
-    "image": "https://i.ibb.co/QFS4NrF/pexels-binyamin-mellish-1396132.jpg",
+"image": "https://i.ibb.co/QFS4NrF/pexels-binyamin-mellish-1396132.jpg",
     "estate_title": "Rural Farmhouse",
     "id": "7",
     "segment_name": "Single-Family Home",
@@ -81,10 +87,11 @@
     "status": "sale",
     "area": "3,000 sq ft",
     "location": "Country Haven, USA",
-    "facilities": ["wrap-around porch", "barn", "orchard"]
+    "facilities": ["wrap-around porch", "barn", "orchard"],
+    "button": "View Property"
   },
   {
-    "image": "https://i.ibb.co/h8NVtSG/pexels-jessica-bryant-1370704.jpg",
+"image": "https://i.ibb.co/h8NVtSG/pexels-jessica-bryant-1370704.jpg",
     "estate_title": "City Loft",
     "id": "8",
     "segment_name": "Apartment",
@@ -93,10 +100,11 @@
     "status": "sale",
     "area": "1,000 sq ft",
     "location": "Cityscape Plaza, USA",
-    "facilities": ["open floor plan", "city views", "gym"]
+    "facilities": ["open floor plan", "city views", "gym"],
+    "button": "View Property"
   },
   {
-    "image": "https://i.ibb.co/YRTSV6f/pexels-binyamin-mellish-186077.jpg",
+"image": "https://i.ibb.co/YRTSV6f/pexels-binyamin-mellish-186077.jpg",
     "estate_title": "Lakefront Cabin",
     "id": "9",
     "segment_name": "Vacation Rental",
@@ -105,282 +113,7 @@
     "status": "rent",
     "area": "800 sq ft",
     "location": "Lakeside Haven, USA",
-    "facilities": ["fireplace", "deck", "fishing dock"]
-  },
-  {
-    "image": "https://i.ibb.co/9GYk02x/pexels-amaury-michaux-18189675.jpg",
-    "estate_title": "Family Retreat Home",
-    "id": "10",
-    "segment_name": "Single-Family Home",
-    "description": "Escape the hustle and bustle in this cozy family retreat.",
-    "price": "$450,000",
-    "status": "sale",
-    "area": "2,200 sq ft",
-    "location": "Woodland Haven, USA",
-    "facilities": ["wooded surroundings", "fire pit", "wrap-around porch"]
-  },
-  {
-    "image": "https://i.ibb.co/TKk8s6R/pexels-bryan-dijkhuizen-18189048.jpg",
-    "estate_title": "Urban Chic Townhouse",
-    "id": "11",
-    "segment_name": "Townhouse",
-    "description": "Chic townhouse with sleek finishes in a prime urban location.",
-    "price": "$3,000/month",
-    "status": "rent",
-    "area": "1,600 sq ft",
-    "location": "Metropolitan Plaza, USA",
-    "facilities": ["modern design", "rooftop garden", "garage"]
-  },
-  {
-    "image": "https://i.ibb.co/HrLbfSw/pexels-vlad-bagacian-1212053.jpg",
-    "estate_title": "Skyview Luxury Apartment",
-    "id": "12",
-    "segment_name": "Apartment",
-    "description": "Experience luxury living with panoramic skyline views.",
-    "price": "$1,500,000",
-    "status": "sale",
-    "area": "2,000 sq ft",
-    "location": "Skyline Residences, USA",
-    "facilities": ["floor-to-ceiling windows", "rooftop pool", "24/7 security"]
-  },
-  {
-    "image": "https://i.ibb.co/TBQWN83/pexels-vika-glitter-1648768.jpg",
-    "estate_title": "Campus Residence Hall",
-    "id": "13",
-    "segment_name": "Student Housing",
-    "description": "Convenient campus living with modern amenities.",
-    "price": "$700/month",
-    "status": "rent",
-    "area": "500 sq ft",
-    "location": "Campus View, USA",
-    "facilities": ["study pods", "cafeteria", "recreation room"]
-  },
-  {
-    "image": "https://i.ibb.co/42tFnWq/pexels-pixabay-277667.jpg",
-    "estate_title": "Elderly Care Community Apartment",
-    "id": "14",
-    "segment_name": "Senior Living Community",
-    "description": "Community-oriented living with tailored support for seniors.",
-    "price": "$5,500/month",
-    "status": "rent",
-    "area": "1,400 sq ft",
-    "location": "Golden Years Estates, USA",
-    "facilities": ["nurse on-site", "community events", "parks and walking trails"]
-  },
-  {
-    "image": "https://i.ibb.co/dPtfV2Z/pexels-pixabay-164558.jpg",
-    "estate_title": "Seaside Bungalow Retreat",
-    "id": "15",
-    "segment_name": "Vacation Rental",
-    "description": "Escape to a quaint seaside bungalow for a relaxing getaway.",
-    "price": "$250/night",
-    "status": "rent",
-    "area": "1,200 sq ft",
-    "location": "Oceanfront Escape, USA",
-    "facilities": ["oceanfront deck", "hammocks", "surfboard rental"]
-  },
-  {
-    "image": "https://i.ibb.co/QFS4NrF/pexels-binyamin-mellish-1396132.jpg",
-    "estate_title": "Countryside Farm Cottage",
-    "id": "16",
-    "segment_name": "Single-Family Home",
-    "description": "Quaint cottage nestled amidst rolling countryside fields.",
-    "price": "$280,000",
-    "status": "sale",
-    "area": "1,800 sq ft",
-    "location": "Meadowside Acres, USA",
-    "facilities": ["wrap-around porch", "garden", "barn"]
-  },
-  {
-    "image": "https://i.ibb.co/h8NVtSG/pexels-jessica-bryant-1370704.jpg",
-    "estate_title": "Metropolitan Loft",
-    "id": "17",
-    "segment_name": "Apartment",
-    "description": "Sleek loft living in the heart of the bustling metropolis.",
-    "price": "$900,000",
-    "status": "sale",
-    "area": "1,200 sq ft",
-    "location": "Metro Loft Tower, USA",
-    "facilities": ["industrial chic design", "rooftop lounge", "concierge"]
-  },
-  {
-    "image": "https://i.ibb.co/YRTSV6f/pexels-binyamin-mellish-186077.jpg",
-    "estate_title": "Mountain Chalet Retreat",
-    "id": "18",
-    "segment_name": "Vacation Rental",
-    "description": "Cozy mountain chalet perfect for a winter retreat.",
-    "price": "$350/night",
-    "status": "rent",
-    "area": "1,500 sq ft",
-    "location": "Alpine Haven, USA",
-    "facilities": ["ski-in/ski-out access", "hot tub", "stone fireplace"]
-  },
-  {
-    "image": "https://i.ibb.co/9GYk02x/pexels-amaury-michaux-18189675.jpg",
-    "estate_title": "Classic Colonial Home",
-    "id": "19",
-    "segment_name": "Single-Family Home",
-    "description": "Timeless elegance in this classic colonial-style home.",
-    "price": "$600,000",
-    "status": "sale",
-    "area": "2,800 sq ft",
-    "location": "Heritage Heights, USA",
-    "facilities": ["wrap-around porch", "formal dining room", "home office"]
-  },
-  {
-    "image": "https://i.ibb.co/TKk8s6R/pexels-bryan-dijkhuizen-18189048.jpg",
-    "estate_title": "City Center Townhouse",
-    "id": "20",
-    "segment_name": "Townhouse",
-    "description": "Townhouse living with the convenience of city center amenities.",
-    "price": "$3,200/month",
-    "status": "rent",
-    "area": "1,700 sq ft",
-    "location": "Central Plaza, USA",
-    "facilities": ["rooftop garden", "modern interior", "garage"]
-  },
-  {
-    "image": "https://i.ibb.co/HrLbfSw/pexels-vlad-bagacian-1212053.jpg",
-    "estate_title": "Penthouse Suite",
-    "id": "21",
-    "segment_name": "Apartment",
-    "description": "Luxurious penthouse living with stunning panoramic city views.",
-    "price": "$2,000,000",
-    "status": "sale",
-    "area": "3,500 sq ft",
-    "location": "Skyscraper Heights, USA",
-    "facilities": ["private elevator", "sky garden", "home theater"]
-  },
-  {
-    "image": "https://i.ibb.co/TBQWN83/pexels-vika-glitter-1648768.jpg",
-    "estate_title": "Campus Studio Apartment",
-    "id": "22",
-    "segment_name": "Student Housing",
-    "description": "Compact studio living perfect for campus life.",
-    "price": "$500/month",
-    "status": "rent",
-    "area": "300 sq ft",
-    "location": "Campus Suites, USA",
-    "facilities": ["fully furnished", "on-site laundry", "study area"]
-  },
-  {
-    "image": "https://i.ibb.co/42tFnWq/pexels-pixabay-277667.jpg",
-    "estate_title": "Assisted Living Community Apartment",
-    "id": "23",
-    "segment_name": "Senior Living Community",
-    "description": "Community-focused living with personalized care services.",
-    "price": "$6,000/month",
-    "status": "rent",
-    "area": "1,100 sq ft",
-    "location": "Golden Oaks Residence, USA",
-    "facilities": ["medical staff on-site", "community dining", "fitness classes"]
-  },
-  {
-    "image": "https://i.ibb.co/dPtfV2Z/pexels-pixabay-164558.jpg",
-    "estate_title": "Seaside Cottage Hideaway",
-    "id": "24",
-    "segment_name": "Vacation Rental",
-    "description": "Charming cottage steps away from the sandy shores.",
-    "price": "$180/night",
-    "status": "rent",
-    "area": "900 sq ft",
-    "location": "Coastal Escape, USA",
-    "facilities": ["seaside deck", "hammocks", "beach chairs"]
-  },
-  {
-    "image": "https://i.ibb.co/QFS4NrF/pexels-binyamin-mellish-1396132.jpg",
-    "estate_title": "Rustic Ranch Home",
-    "id": "25",
-    "segment_name": "Single-Family Home",
-    "description": "Experience rustic charm in this sprawling ranch-style home.",
-    "price": "$750,000",
-    "status": "sale",
-    "area": "3,200 sq ft",
-    "location": "Rustic Retreat, USA",
-    "facilities": ["horse stables", "pasture", "pond"]
-  },
-  {
-    "image": "https://i.ibb.co/h8NVtSG/pexels-jessica-bryant-1370704.jpg",
-    "estate_title": "Industrial Loft Apartment",
-    "id": "26",
-    "segment_name": "Apartment",
-    "description": "Industrial-inspired loft living with exposed brick and beams.",
-    "price": "$800,000",
-    "status": "sale",
-    "area": "1,500 sq ft",
-    "location": "Warehouse District, USA",
-    "facilities": ["open concept", "exposed ductwork", "rooftop patio"]
-  },
-  {
-    "image": "https://i.ibb.co/YRTSV6f/pexels-binyamin-mellish-186077.jpg",
-    "estate_title": "Mountain View Lodge",
-    "id": "27",
-    "segment_name": "Vacation Rental",
-    "description": "Rustic lodge with panoramic mountain views, perfect for nature lovers.",
-    "price": "$400/night",
-    "status": "rent",
-    "area": "2,500 sq ft",
-    "location": "Mountain Haven, USA",
-    "facilities": ["wrap-around deck", "hot tub", "hiking trails"]
-  },
-  {
-    "image": "https://i.ibb.co/9GYk02x/pexels-amaury-michaux-18189675.jpg",
-    "estate_title": "Suburban Retreat Home",
-    "id": "28",
-    "segment_name": "Single-Family Home",
-    "description": "Escape the city to this peaceful suburban retreat.",
-    "price": "$500,000",
-    "status": "sale",
-    "area": "2,000 sq ft",
-    "location": "Tranquil Estates, USA",
-    "facilities": ["spacious backyard", "patio", "home office"]
-  },
-  {
-    "image": "https://i.ibb.co/TKk8s6R/pexels-bryan-dijkhuizen-18189048.jpg",
-    "estate_title": "Downtown Executive Townhouse",
-    "id": "29",
-    "segment_name": "Townhouse",
-    "description": "Executive townhouse living in the heart of downtown.",
-    "price": "$4,000/month",
-    "status": "rent",
-    "area": "2,200 sq ft",
-    "location": "Executive Quarters, USA",
-    "facilities": ["luxurious finishes", "rooftop terrace", "private elevator"]
-  },
-  {
-    "image": "https://i.ibb.co/HrLbfSw/pexels-vlad-bagacian-1212053.jpg",
-    "estate_title": "Urban Oasis Apartment",
-    "id": "30",
-    "segment_name": "Apartment",
-    "description": "Serenity in the city with this oasis-style apartment.",
-    "price": "$1,000,000",
-    "status": "sale",
-    "area": "1,800 sq ft",
-    "location": "Central Park Towers, USA",
-    "facilities": ["lush greenery", "private balcony", "yoga studio"]
-  },
-  {
-    "image": "https://i.ibb.co/TBQWN83/pexels-vika-glitter-1648768.jpg",
-    "estate_title": "Coastal Cottage Getaway",
-    "id": "31",
-    "segment_name": "Vacation Rental",
-    "description": "Escape to a charming coastal cottage for a seaside retreat.",
-    "price": "$220/night",
-    "status": "rent",
-    "area": "1,000 sq ft",
-    "location": "Seascape Cottage, USA",
-    "facilities": ["beachfront location", "porch swing", "outdoor shower"]
-  },
-  {
-    "image": "https://i.ibb.co/QFS4NrF/pexels-binyamin-mellish-1396132.jpg",
-    "estate_title": "Riverside Retreat Home",
-    "id": "32",
-    "segment_name": "Single-Family Home",
-    "description": "Tranquil riverside living in this charming retreat home.",
-    "price": "$550,000",
-    "status": "sale",
-    "area": "2,300 sq ft",
-    "location": "Riverside Haven, USA",
-    "facilities": ["riverfront deck", "kayak launch", "fire pit"]
+    "facilities": ["fireplace", "deck", "fishing dock"],
+    "button": "View Property"
   }
 ]
