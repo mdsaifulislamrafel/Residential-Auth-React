@@ -11,7 +11,7 @@ const Banner = () => {
             nextSlider();
         }, 3000);
         return () => clearInterval(intervalId);
-    }, [currentSlider]);
+    }, [currentSlider, nextSlider]);
     return (
         <div className="w-full justify-center mx-auto h-[240px] md:h-[540px] overflow-hidden ">
             <div className="relative overflow-hidden">

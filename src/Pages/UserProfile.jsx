@@ -8,7 +8,7 @@ AOS.init();
 const UserProfile = () => {
     const { user } = useContext(AuthContext);
     return (
-        <div className="flex flex-col justify-center items-center h-full md:h-[75vh] " data-aos="zoom-out-up">
+        <div className="flex flex-col justify-center items-center h-full md:h-[70vh] " data-aos="zoom-out-up">
             <Helmet>
                 <title>User Profile</title>
             </Helmet>
