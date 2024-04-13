@@ -34,7 +34,7 @@ const UpdateProfile = () => {
           <h2 className='text-3xl font-extrabold border-b-4 border-cyan-400 tracking-[.25em] uppercase'>Profile</h2>
           <img data-aos="zoom-in" data-aos-duration="1000" className='ring-4 ring-pink-500 rounded-full w-48 md:w-52' src={user?.photoURL} alt="" />
           <h4 data-aos="zoom-out-right" data-aos-duration="1200" className="text-xl md:text-2xl font-bold">Name : {user?.displayName}</h4>
-          <p data-aos="zoom-out-right" data-aos-duration="1400" className='text-sm md:text-xl font-semibold'>Email : {user?.email}</p>
+          <p data-aos="zoom-out-right" data-aos-duration="1400" className='text-sm md:text-xl font-semibold'>Email : {user?.email || "Email is not found"}</p>
           
         </div>
         <div className='border-2 border-amber-300 p-2 md:p-5 text-center w-full md:w-[40%] md:space-y-5 animate__animated animate__pulse'>
