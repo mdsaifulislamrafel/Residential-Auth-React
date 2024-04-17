@@ -5,7 +5,7 @@ import 'animate.css';
 import { Helmet } from 'react-helmet-async';
 
 const UpdateProfile = () => {
-  const { user, upDateProfile } = useContext(AuthContext);
+  const { user, upDateProfile, setReload } = useContext(AuthContext);
   const [fullName, setFullName] = useState('');
   const [photoURL, setPhotoURL] = useState('');
 
@@ -14,9 +14,11 @@ const UpdateProfile = () => {
     setPhotoURL(user.photoURL || '');
   }, [user]);
 
+
   const handleUpdateProfile = () => {
     upDateProfile(fullName, photoURL)
       .then(() => {
+        setReload(prevReload => !prevReload);
         toast.success("Profile updated successfully!");
       })
       .catch((error) => {
@@ -35,7 +37,7 @@ const UpdateProfile = () => {
           <img data-aos="zoom-in" data-aos-duration="1000" className='ring-4 ring-pink-500 rounded-full w-48 md:w-52' src={user?.photoURL} alt="" />
           <h4 data-aos="zoom-out-right" data-aos-duration="1200" className="text-xl md:text-2xl font-bold">Name : {user?.displayName}</h4>
           <p data-aos="zoom-out-right" data-aos-duration="1400" className='text-sm md:text-xl font-semibold'>Email : {user?.email || "Email is not found"}</p>
-          
+
         </div>
         <div className='border-2 border-amber-300 p-2 md:p-5 text-center w-full md:w-[40%] md:space-y-5 animate__animated animate__pulse'>
           <h2 className="text-3xl font-bold mb-10 border-b-4 border-y-cyan-500 animate__animated animate__backInDown">

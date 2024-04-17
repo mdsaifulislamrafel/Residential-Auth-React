@@ -8,7 +8,7 @@ const Massage = () => {
             <Helmet>
                 <title>Massage</title>
             </Helmet>
-            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 mt-5 dark:bg-gray-100 dark:text-gray-800">
+            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" className="grid max-w-screen-xl grid-cols-1 gap-8 px-4 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 mt-5 dark:bg-gray-100 dark:text-gray-800">
                 <div data-aos="fade-right" data-aos-delay="700" data-aos-duration="1100" className="flex flex-col items-center justify-between">
                     <div className="space-y-2">
                         <h2 data-aos-duration="1300" data-aos="fade-right" data-aos-delay="800" className="text-4xl font-bold leading-tight lg:text-5xl">Let's talk!</h2>

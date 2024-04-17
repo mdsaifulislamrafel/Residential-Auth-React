@@ -7,6 +7,9 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [reload, setReload] = useState(false);
+
+
     const GoogleProvider = new GoogleAuthProvider();
     const FacebookProvider = new FacebookAuthProvider();
     const GithubProvider = new GithubAuthProvider();
@@ -56,12 +59,16 @@ const AuthProvider = ({ children }) => {
         return () => {
             unSubscribe();
         }
-    }, [])
+    }, [reload])
 
-    const authInfo = { user, createUser, signIn, logOut, googleSignIn, facebookSignIn, githubSignIn, resetPassword, loading, upDateProfile };
+    const authInfo = { user, createUser, signIn, logOut, googleSignIn, facebookSignIn, githubSignIn, resetPassword, loading, upDateProfile, setReload };
     return (
         <AuthContext.Provider value={authInfo}>
-            {children}
+            {loading ? (
+                <div>return <div className="w-10 h-10 my-5 mx-auto animate-[spin_2s_linear_infinite] rounded-full border-8 border-dotted border-sky-600"></div></div>
+            ) : (
+                children
+            )}
         </AuthContext.Provider>
     );
 };
